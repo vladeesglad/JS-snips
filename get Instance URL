@@ -1,0 +1,14 @@
+ function getServerInstance()
+                {
+                    var URL = window.location + “”; 
+                    var urlParseArray = url.split(“.”); 
+                    var i; 
+                    for(i=0; i< urlParseArray.length; i++)
+                    {
+                    if(urlParseArray[i].indexOf(“salesforce”) != -1)
+                        return urlParseArray[i-1]; 
+                        if(urlParseArray[i].indexOf(“force”) != -1)
+                        return urlParseArray[i-2] 
+                    }
+                    return null; 
+                }
